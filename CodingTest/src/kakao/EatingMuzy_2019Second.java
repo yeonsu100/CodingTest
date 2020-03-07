@@ -25,7 +25,6 @@ class EatingMuzy_2019Second {
 	};
 	
 	public int solution(int[] food_times, long k) {
-		int answer=0;
 		List<Food> foods=new LinkedList<Food>();
 		int n=food_times.length;
 		for(int i=0; i<n; ++i)
@@ -52,6 +51,6 @@ class EatingMuzy_2019Second {
 			--n;
 		}
 		
-		return answer;
+		return -1;
 	}
 }
