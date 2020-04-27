@@ -15,11 +15,8 @@ public class LucusNumbers {
 				n1=n3;
 				System.out.println(n2);
 			}
-<<<<<<< HEAD
 		}else if(n==1) {
 			System.out.println("\n2");
-=======
->>>>>>> branch 'master' of https://github.com/yeonsu100/CodingTest.git
 		}else {
 			System.out.println("Input a positive number, please!");
 		}
