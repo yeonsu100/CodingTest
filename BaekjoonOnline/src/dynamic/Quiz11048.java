@@ -15,5 +15,9 @@ public class Quiz11048 {
 		}
 		int[][] start=new int[n+1][m+1];
 		start[1][1]=arr[1][1];		// 출발지점 
+		
+		// 경로 이동 (x=row, y=column)
+		int[] x= {0, -1};
+		int[] y= {-1, 0};
 	}
 }
