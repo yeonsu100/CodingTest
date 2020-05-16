@@ -10,9 +10,10 @@ public class Quiz11048 {
 		int[][] arr=new int[n+1][m+1];
 		for(int i=1; i<=n; i++) {
 			for(int j=1; j<=m; j++) {
-				
+				arr[i][j]=Integer.parseInt(sc.next());
 			}
 		}
 		int[][] start=new int[n+1][m+1];
+		start[1][1]=arr[1][1];		// 출발지점 
 	}
 }
