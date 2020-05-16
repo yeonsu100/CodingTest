@@ -16,8 +16,14 @@ public class Quiz11048 {
 		int[][] start=new int[n+1][m+1];
 		start[1][1]=arr[1][1];		// 출발지점 
 		
-		// 경로 이동 (x=row, y=column)
-		int[] x= {0, -1};
-		int[] y= {-1, 0};
+		// 경로 이동 
+		int[] row= {0, -1};
+		int[] col= {-1, 0};
+		
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=m; j++) {
+				
+			}
+		}
 	}
 }
