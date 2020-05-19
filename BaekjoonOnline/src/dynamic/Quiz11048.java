@@ -22,8 +22,19 @@ public class Quiz11048 {
 		
 		for(int i=1; i<=n; i++) {
 			for(int j=1; j<=m; j++) {
-				
+				if(!(i==1 && j==1)) {
+					int[] temp= {0, 0};
+					for(int z=0; z<row.length; z++) {
+						int prev_x=i+row[z];
+						int prev_y=j+col[z];
+						if(prev_x>0 && prev_x <= n && prev_y>0 && prev_y <= m) {
+							temp[z]=arr[i][j]+start[prev_x][prev_y];
+						}
+					}
+					start[i][j]=Math.max(temp[0], temp[1]);
+				}
 			}
 		}
+		System.out.println(start[n][m]);
 	}
 }
