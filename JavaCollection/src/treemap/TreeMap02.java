@@ -19,5 +19,7 @@ public class TreeMap02 {
 		tm2.put("Honeymaren", "Rachel");
 		System.out.println("Tree Map 2 : "+tm2);
 		
+		tm1.putAll(tm2);
+		System.out.println("After coping map2 to map1"+tm1);
 	}
 }
