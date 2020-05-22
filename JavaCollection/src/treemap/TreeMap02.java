@@ -10,6 +10,14 @@ public class TreeMap02 {
 		tm1.put("Kristoff", "Jonathan");
 		tm1.put("Sven", "Jonathan");
 		System.out.println("Tree Map 1 : "+tm1);
-
+		
+		TreeMap<String, String> tm2=new TreeMap<String, String>();
+		tm2.put("Mattias", "Sterling");
+		tm2.put("Agnarr", "Alfred");
+		tm2.put("Iduna", "Evan");
+		tm2.put("Yelena", "Martha");
+		tm2.put("Honeymaren", "Rachel");
+		System.out.println("Tree Map 2 : "+tm2);
+		
 	}
 }
