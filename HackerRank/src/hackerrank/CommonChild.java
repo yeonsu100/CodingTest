@@ -27,5 +27,7 @@ public class CommonChild {
 				}
 			}
 		}
+		int result=valueLength[str1.length()][str2.length()];
+		return result;
 	}
 }
