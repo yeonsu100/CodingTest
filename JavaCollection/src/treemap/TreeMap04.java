@@ -16,5 +16,11 @@ public class TreeMap04 {
 		}else {
 			System.out.println("The Tree Map does NOT contain value 'Anna'");
 		}
+		
+		if(tm.containsValue("Kristoff")) {
+			System.out.println("The Tree Map contains value 'Kristoff'");
+		}else {
+			System.out.println("The Tree Map does NOT contain value 'Kristoff'");
+		}
 	}
 }
