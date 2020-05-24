@@ -7,5 +7,10 @@ public class CommonChild {
 		String str1=sc.next();
 		String str2=sc.next();
 		
+		int result=commonChild(str1, str2);
+	}
+	
+	public static int commonChild(String str1, String str2) {
+		
 	}
 }
