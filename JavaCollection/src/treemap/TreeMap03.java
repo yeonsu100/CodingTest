@@ -16,5 +16,11 @@ public class TreeMap03 {
 		}else {
 			System.out.println("The Tree Map does NOT contain key 'Frohana 1'");
 		}
+		
+		if(tm.containsKey("Frohana 5")) {
+			System.out.println("The Tree Map contains key 'Frohana 5'");
+		}else {
+			System.out.println("The Tree Map does NOT contain key 'Frohana 5'");
+		}
 	}
 }
