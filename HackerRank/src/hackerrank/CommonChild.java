@@ -1,5 +1,8 @@
 package hackerrank;
 import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
 public class CommonChild {
 	public static void main(String[] args) {
@@ -16,7 +19,12 @@ public class CommonChild {
 		int[][] valueLength=new int[str1.length()+1][str2.length()+1];
 		for(int i=0; i<str1.length(); i++) {
 			for(int j=0; j<str2.length(); j++) {
-				
+				if(str1.charAt(i)==str2.charAt(j)) {
+					valueLength[i+1][j+1]=valueLength[i][j]+1;
+				}else {
+					valueLength[i+1][j+1]
+							=Math.max(valueLength[i+1][j], valueLength[i][j+1]);
+				}
 			}
 		}
 	}
