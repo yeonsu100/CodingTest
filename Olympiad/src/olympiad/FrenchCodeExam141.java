@@ -12,6 +12,8 @@ public class FrenchCodeExam141 {
 		reverse(A, 0, len-offset-1);
 		reverse(A, len-offset, len-1);
 		reverse(A, 0, len-1);
+		
+		System.out.println("\n"+Arrays.toString(A));
 	}
 	
 	private static void reverse(char[] str, int start, int end) {
