@@ -31,7 +31,8 @@ public class SubArray {
 					max_End=end;
 				}
 			}
+			end++;
 		}	
-		return 0;
+		return max;
 	}
 }
