@@ -15,9 +15,23 @@ public class SubArray {
 		int max_Begin=0;
 		int max_End=0;
 		int begin=0;
-		int ene=0;
+		int end=0;
 		int sum=0;
 		
+		while(end < nums.length) {
+			sum+=nums[end];
+			
+			if(sum<0) {
+				sum=0;
+				begin=end+1;
+			}else {
+				if(sum > max) {
+					max=sum;
+					max_Begin=begin;
+					max_End=end;
+				}
+			}
+		}	
 		return 0;
 	}
 }
