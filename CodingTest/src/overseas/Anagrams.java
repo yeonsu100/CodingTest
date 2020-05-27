@@ -15,9 +15,12 @@ public class Anagrams {
 			return true;
 		}
 		
+		return true;
 	}
 	
 	public static void main(String[] args) {
+		String str1="wxyz";
+		String str2="zyxw";
 		
 	}
 }
