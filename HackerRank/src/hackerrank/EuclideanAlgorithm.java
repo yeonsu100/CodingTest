@@ -13,7 +13,7 @@ public class EuclideanAlgorithm {
 		if(x%y == 0) {
 			return y;
 		}else {
-			return 0;
+			return x;
 		}
 	}
 	
