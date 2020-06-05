@@ -22,6 +22,20 @@ public class RadixSort {
 			}
 		}
 		
+		int exponent=1;
+		while((maxValue=minValue)/exponent >= 1) {
+			RadixSort.countingSortByDigit(array, radix, exponent, minValue);
+            exponent *= radix;
+		}
+	}
+	
+	private static void countingSortByDigit(
+			int[] array, int radix, int exponent, int minvalue) {
+		int bucketIndex;
+		int[] buckets=new int[radix];
+		int[] output=new int[array.length];
+		
+		
 	}
 	
 	public static void main(String[] args) {
