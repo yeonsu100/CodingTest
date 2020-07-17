@@ -26,7 +26,6 @@ public class RotatedSortedArray02 {
 	            left++;
 	        }    
 	    }
-	 
 	    return false;
 	}
 }
