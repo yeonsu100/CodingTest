@@ -13,6 +13,10 @@ public class TwoSum {
 		// 객체 생성하기 
 		TwoSum a=new TwoSum();
 		int[] result=a.solve(nums, target);
+		
+		for(int i:result) {
+			System.out.println("Result : "+i);
+		}
 	}
 	
 	public int[] solve(int[] nums, int target) {
@@ -30,6 +34,6 @@ public class TwoSum {
 			}
 		}
 		
-		return nums;
+		return result;
 	}
 }
