@@ -15,5 +15,16 @@ public class MoveZeros {
 				System.out.println("index "+index);
 			}
 		}
+		
+		// 3
+		while(index<nums.length) {
+			nums[index]=0;
+			index++;
+		}
+		
+		// 4
+		for(int i=0; i<nums.length; i++) {
+			System.out.println(nums[i]);
+		}
 	}
 }
