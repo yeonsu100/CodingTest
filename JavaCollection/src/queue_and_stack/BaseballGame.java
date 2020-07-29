@@ -15,13 +15,19 @@ public class BaseballGame {
 		// 데이터 출력 
 		for(String op:strs) {
 			switch(op) {
-				case "C" : 
-					stack.pop();
+				case "C" : 		// C가 나오면 
+					stack.pop();	// 값을 하나 빼낸다 
 					break;
-				case "D" :
-					stack.push(stack.peek()*2);
+				case "D" :		// D가 나오면 
+					stack.push(stack.peek()*2);  // 2번의 값을 더블 
+					break;
 				case "+" : 
-					
+					int x=stack.pop();
+					int y=stack.pop();
+					stack.push(y);			// y를 먼저 넣은 뒤 
+					stack.push(x);			// x를 넣고 
+					stack.push(x+y);		// 두 값을 합한 값을 넣는다 
+					break;
 				default : 
 					stack.push(Integer.valueOf(op));
 			}
