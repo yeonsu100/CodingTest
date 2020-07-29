@@ -25,8 +25,8 @@ public class DailyTemperature {
 				int index=stack.pop();
 				result[index]=i-index;
 			}
-			
 			stack.push(i);
 		}
+		return result;
 	}
 }
