@@ -18,7 +18,12 @@ public class AddTwoNumbers {
 		ListNode l2=new ListNode(5);
 		l2.next=new ListNode(6);
 		l2.next.next=new ListNode(2);
-		ListNode node=solve(l1, l2);		
+		ListNode node=solve(l1, l2);
+		
+		while(node != null) {
+			System.out.println(node.val);
+			node=node.next;
+		}
 	}
 	
 	public static ListNode solve(ListNode l1, ListNode l2) {
