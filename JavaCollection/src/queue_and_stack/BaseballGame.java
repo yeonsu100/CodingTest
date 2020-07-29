@@ -32,5 +32,12 @@ public class BaseballGame {
 					stack.push(Integer.valueOf(op));
 			}
 		}
+		
+		int sum=0;
+		while(!stack.isEmpty()) {
+			sum+=stack.pop();
+		}
+		
+		return sum;			// output : 27 
 	}
 }
