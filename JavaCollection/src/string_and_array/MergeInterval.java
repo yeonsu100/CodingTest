@@ -36,7 +36,14 @@ public class MergeInterval {
 		// 1
 		List<Interval> result=new ArrayList<>();
 		
+		print(intervals);
 		Collections.sort(intervals, (a,b)->a.start-b.start);	// 오름차순 (람다표현식 이용) 
+	  //Collections.sort(intervals, (a,b)->b.start-a.start);	// 내림차순 
+
+		System.out.println("=== after sorting ===");
+		print(intervals);
+		
+		return result;
 	}
 	
 	void print(List<Interval> list) {
@@ -46,4 +53,10 @@ public class MergeInterval {
 		}
 	}
 	
+	Comparator comp = new Comparator<Interval>() {
+		public int compare(Interval a, Interval b) {
+			// TODO Auto-generated method stub
+			return a.start - b.start;
+		}
+	};
 }
