@@ -1,5 +1,7 @@
 package graph;
 
+import java.util.Stack;
+
 public class MaxDepthOfBinaryTree_DFSstack {
 	public static void main(String[] args) {
 		MaxDepthOfBinaryTree_DFSstack a=new MaxDepthOfBinaryTree_DFSstack();
@@ -14,6 +16,27 @@ public class MaxDepthOfBinaryTree_DFSstack {
 	}
 	
 	public int dfs(TreeNode root) {
+		// 1. Null check
+		if(root==null) return 0;
 		
+		// 2. 스택 구현
+		Stack<TreeNode> stack=new stack<>();
+		Stack<Integer> valueStack=new Stack<>();
+		stack.push(root);
+		valueStack.push(1);
+		int max=0;
+		
+		// 3. pop
+		while(!stack.isEmpty()) {
+			TreeNode node=stack.pop();
+			int count=valueStack.pop();
+			max=Math.max(max, count);
+			if(node.left!=null) {
+				stack.push(node.left);
+			}
+			if(node.right!=null) {
+				stack.push(node.right);
+			}
+		}
 	}
 }
