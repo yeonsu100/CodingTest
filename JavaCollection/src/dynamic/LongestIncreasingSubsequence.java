@@ -34,6 +34,6 @@ public class LongestIncreasingSubsequence {
 			result=Math.max(result, dp[i]);
 		}
 		
-		return 0;
+		return result;		// Value 7 
 	}
 }
