@@ -1,6 +1,6 @@
 package graph;
 
-public class NumberOfIsland {
+public class NumberOfIsland_DFS {
 	// DFS (Depth First Search) algorithm
 	public static void main(String[] args) {
 		char[][] grid={
@@ -9,7 +9,7 @@ public class NumberOfIsland {
 				{'1','1','0','0','1'},
 				{'0','0','0','0','1'}
 				};
-		NumberOfIsland a=new NumberOfIsland();
+		NumberOfIsland_DFS a=new NumberOfIsland_DFS();
 		a.solve(grid);
 	}
 	
