@@ -25,7 +25,11 @@ public class MaxDepthOfBinaryTree_Recursive {
 	}
 	
 	public int maxDepth(TreeNode root) {
-		
+		if(root==null) return 0;
+		System.out.println(root.val);
+		int leftMax=maxDepth(root.left);
+		int rightMax=maxDepth(root.right);
+		return Math.max(leftMax, rightMax)+1;
 	}
 	
 }
