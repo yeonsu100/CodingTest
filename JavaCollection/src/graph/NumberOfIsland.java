@@ -23,16 +23,20 @@ public class NumberOfIsland {
 		int count=0;
 		for(int i=0; i<grid.length; i++) {
 			for(int j=0; j<grid[i].length; j++) {
-				if(grid[i][j]==1) {
+				if(grid[i][j]=='1') {
+					System.out.print("result count grid["+i+"]["+j+"] "+grid[i][j]);
 					count++;
 					dfs(grid, i, j);
 				}
 			}
 		}
+		System.out.println("=== after ===");
+		print(grid);
 		return count;
 	}
 	
 	public void dfs(char[][] grid, int i, int j) {
+		System.out.println("i: "+i+", j: "+j);
 		int m=grid.length;
 		int n=grid[0].length;
 		
@@ -43,7 +47,6 @@ public class NumberOfIsland {
 		dfs(grid, i+1, j);
 		dfs(grid, i, j-1);
 		dfs(grid, i, j+1);
-		
 	}
 	
 	public void print(char[][] grid) {
