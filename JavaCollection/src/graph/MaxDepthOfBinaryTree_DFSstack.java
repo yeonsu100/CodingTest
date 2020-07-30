@@ -20,7 +20,7 @@ public class MaxDepthOfBinaryTree_DFSstack {
 		if(root==null) return 0;
 		
 		// 2. 스택 구현
-		Stack<TreeNode> stack=new stack<>();
+		Stack<TreeNode> stack=new Stack<>();
 		Stack<Integer> valueStack=new Stack<>();
 		stack.push(root);
 		valueStack.push(1);
@@ -33,10 +33,14 @@ public class MaxDepthOfBinaryTree_DFSstack {
 			max=Math.max(max, count);
 			if(node.left!=null) {
 				stack.push(node.left);
+				valueStack.push(1+count);
 			}
 			if(node.right!=null) {
 				stack.push(node.right);
+				valueStack.push(1+count);
 			}
 		}
+		
+		return max;			// output : 4
 	}
 }
