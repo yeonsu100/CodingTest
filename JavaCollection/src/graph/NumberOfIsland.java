@@ -14,6 +14,16 @@ public class NumberOfIsland {
 	}
 	
 	public int solve(char[][] grid) {
-		
+		print(grid);
+		return 0;
+	}
+	
+	public void print(char[][] grid) {
+		for(int i=0; i<grid.length; i++) {
+			for(int j=0; j<grid[i].length; j++) {
+				System.out.print(" grid["+i+"]["+j+"] "+grid[i][j]);
+			}
+			System.out.println();
+		}
 	}
 }
