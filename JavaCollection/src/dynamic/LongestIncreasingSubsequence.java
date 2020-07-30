@@ -30,6 +30,8 @@ public class LongestIncreasingSubsequence {
 					dp[i]=Math.max(dp[j]+1, dp[i]);
 				}
 			}
+			// 3. 값 추출하기 
+			result=Math.max(result, dp[i]);
 		}
 		
 		return 0;
