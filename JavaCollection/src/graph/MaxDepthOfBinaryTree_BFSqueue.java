@@ -33,8 +33,16 @@ public class MaxDepthOfBinaryTree_BFSqueue {
 			int size=queue.size();
 			for(int i=0; i<size; i++) {
 				TreeNode node=queue.poll();
+				if(node.left!=null) {
+					queue.offer(node.left);
+				}
+				if(node.right!=null) {
+					queue.offer(node.right);
+				}
 			}
 			count++;		// 빼낼 때마다 카운트를 하나씩 증가시킨다 
 		}
+		
+		return count;
 	}
 }
