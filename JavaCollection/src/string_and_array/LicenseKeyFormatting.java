@@ -18,6 +18,9 @@ public class LicenseKeyFormatting {
 	}
 	
 	public static String solve(String str, int k) {
+		String newStr=str.replace("-", "");	// (Char oldChar, Char newChar) 즉, -를 없애라는 의미
+		System.out.println("newStr : "+newStr);
 		
+		return newStr;
 	}
 }
