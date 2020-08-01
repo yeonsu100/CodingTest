@@ -2,6 +2,8 @@ package string_and_array;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 /*
  * 1. Sorting
@@ -40,13 +42,33 @@ public class MeetingRoom2 {
 			return 0;
 		}
 		Arrays.parallelSort(intervals, Comp);
+		
+		// Priority Queue
+		Queue<Interval> heap=new PriorityQueue<Interval>(intervals.length, Comp2);
+		heap.offer(intervals[0]);
+		
+		for(int i=1; i<intervals.length; i++) {
+			Interval interval=heap.poll();
+			if(intervals[i].start < interval.end) {
+				heap.offer(intervals[i]);
+			}
+			heap.offer(interval);
+		}		
 	}
+	
+	Comparator<Interval> Comp2=new Comparator<Interval>() {
+		@Override
+		public int compare(Interval o1, Interval o2) {
+			// TODO Auto-generated method stub
+			return o1.end-o2.end;
+		}
+	};
 	
 	Comparator<Interval> Comp=new Comparator<Interval>() {
 		@Override
 		public int compare(Interval o1, Interval o2) {
 			// TODO Auto-generated method stub
-			return 0;
+			return o1.start-o2.start;
 		}
 	};
 }
