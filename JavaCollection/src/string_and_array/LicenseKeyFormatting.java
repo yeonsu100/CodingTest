@@ -36,9 +36,10 @@ public class LicenseKeyFormatting {
 		}
 		System.out.println("sb : "+sb);	// (output : 8F3Z2E9WABCDEF) 
 		for(int i=k; i<leng; i=i+k) {	// 4를 빼고, 8을 빼고, 12개를 빼낸다 
-			sb.insert(leng-i, '-');		// String이 아니라 Char이므로 싱글따옴표 사용 
+			System.out.println("leng-i : "+(leng-i));
+			sb.insert(leng-i, ' ');		// String이 아니라 Char이므로 싱글따옴표 사용 
 		}
-		System.out.println("-sb : "+sb);	// (output : 8F-3Z2E-9WAB-CDEF)
+		System.out.println("-sb : "+sb);	// (output : 8F 3Z2E 9WAB CDEF)
 
 
 		return newStr;
