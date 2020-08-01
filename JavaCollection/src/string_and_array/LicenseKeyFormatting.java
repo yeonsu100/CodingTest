@@ -18,9 +18,14 @@ public class LicenseKeyFormatting {
 	}
 	
 	public static String solve(String str, int k) {
+		// 하이픈 없애기 (output : 8F3Z2e9wabcdef)
 		String newStr=str.replace("-", "");	// (Char oldChar, Char newChar) 즉, -를 없애라는 의미
-		System.out.println("newStr : "+newStr);
+		System.out.println("newStr1 : "+newStr);
 		
+		// 대문자로 변환 (output : 8F3Z2E9WABCDEF)
+		newStr=newStr.toUpperCase();
+		System.out.println("newStr2 : "+newStr);
+
 		return newStr;
 	}
 }
