@@ -53,7 +53,8 @@ public class MeetingRoom2 {
 				heap.offer(intervals[i]);
 			}
 			heap.offer(interval);
-		}		
+		}	
+		return heap.size();			// output : 2 
 	}
 	
 	Comparator<Interval> Comp2=new Comparator<Interval>() {
