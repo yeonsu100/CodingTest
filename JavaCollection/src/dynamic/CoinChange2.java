@@ -25,5 +25,6 @@ public class CoinChange2 {
 				}
 			}
 		}
+		return dp[amount]>amount ? -1 : dp[amount];
 	}
 }
