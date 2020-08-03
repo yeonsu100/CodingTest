@@ -17,7 +17,8 @@ public class K_Closest {
 	}
 		
 	public int[][] solve(int[][] points, int k){
-		Queue<int[]> queue=new PriorityQueue<>(points.length, Comp);
+	//  Queue<int[]> queue=new PriorityQueue<>(points.length, Comp);
+		Queue<int[]> queue=new PriorityQueue<>((a,b) -> (a[0]*a[0]+a[1]+a[1])-(b[0]*b[0]+b[1]*b[1]));
 		int[][] result=new int[k][2];
 		int index=0;
 		
@@ -31,13 +32,13 @@ public class K_Closest {
 		return result;
 	}
 	
-	Comparator<int[]> Comp=new Comparator<int[]>() {
-		@Override
-		public int compare(int[] a, int[] b) {
-			// TODO Auto-generated method stub
-			return (a[0]*a[0]+a[1]+a[1])-(b[0]*b[0]+b[1]*b[1]);
-		}
-	};
+//	Comparator<int[]> Comp=new Comparator<int[]>() {
+//		@Override
+//		public int compare(int[] a, int[] b) {
+//			// TODO Auto-generated method stub
+//			return (a[0]*a[0]+a[1]+a[1])-(b[0]*b[0]+b[1]*b[1]);
+//		}
+//	};
 	
 	public void print(int[][] result) {
 		int m=result.length;
