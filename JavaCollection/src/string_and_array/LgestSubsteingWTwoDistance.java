@@ -27,10 +27,11 @@ public class LgestSubsteingWTwoDistance {
 			while(counter>2) {
 				char startChar=s.charAt(start);
 				map.put(startChar, map.get(startChar)-1);
+				if(map.get(startChar)==0) counter--;
 				start++;
 			}
-			
 			length=Math.max(length, end-start);
 		}
+		return length;			// output : 5 
 	}
 }
