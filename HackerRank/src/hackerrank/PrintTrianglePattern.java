@@ -11,17 +11,19 @@ public class PrintTrianglePattern {
 			num=j;
 		}
 		for(i=1; i<=gap; i++) {
-			System.out.println(" ");
+			System.out.print(" ");
 		}
 		gap--;
+
 		for(i=1; i<=j; i++) {
-			System.out.println(num);
+			System.out.print(num);
 			num++;
 		}
 		num--;
+		num--;
 		
 		for(i=1; i<j; i++) {
-			System.out.println(num);
+			System.out.print(num);
 			num--;
 		}
 		System.out.println();
