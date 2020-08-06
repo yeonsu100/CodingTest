@@ -30,7 +30,26 @@ public class UniqueEmailAddress {
 	}
 	
 	private String makeLocalName(String email) {
+		// StringBuilder 이용 
+		StringBuilder sb=new StringBuilder();
 		
+		for(int i=0; i<email.length(); i++) {
+			// 에러 체크 조건 
+			if(email.charAt(i)=='.') {
+				continue;
+			}
+			if(email.charAt(i)=='+') {
+				break;
+			}
+			if(email.charAt(i)=='@') {
+				break;
+			}
+			
+			// append에 담는다 
+			String str=String.valueOf(email.charAt(i));
+			sb.append(str);
+		}
+		return sb.toString();
 	}
 	private String makeDomainName(String email) {
 		
