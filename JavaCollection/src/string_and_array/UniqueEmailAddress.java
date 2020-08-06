@@ -30,6 +30,7 @@ public class UniqueEmailAddress {
 			// set에 넣어 @를 기준으로 다시 연결시켜준다  
 			set.add(localName+"@"+domainName);
 		}
+		return set.size(); 			// output : 2
 	}
 	
 	private String makeLocalName(String email) {
