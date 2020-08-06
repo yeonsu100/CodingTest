@@ -13,6 +13,13 @@ public class LgestSubsteingWTwoDistance {
 	}
 	
 	public static int solve(String s) {
+		int start=0, end=0, length=0, counter=0;
+		Map<Character, Integer> map=new HashMap<>();
 		
+		while(end<s.length()) {		// s.length=7
+			char endChar=s.charAt(end);
+			// c=2, a=2, b=3
+			map.put(endChar, map.getOrDefault(endChar,0)+1);
+		}
 	}
 }
