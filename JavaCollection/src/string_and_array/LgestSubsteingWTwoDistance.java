@@ -20,6 +20,17 @@ public class LgestSubsteingWTwoDistance {
 			char endChar=s.charAt(end);
 			// c=2, a=2, b=3
 			map.put(endChar, map.getOrDefault(endChar,0)+1);
+			if(map.get(endChar)==1) counter++;
+			end++;
+			
+			// c는 두개이므로 삭제 
+			while(counter>2) {
+				char startChar=s.charAt(start);
+				map.put(startChar, map.get(startChar)-1);
+				start++;
+			}
+			
+			length=Math.max(length, end-start);
 		}
 	}
 }
