@@ -24,8 +24,11 @@ public class UniqueEmailAddress {
 		Set<String> set=new HashSet<>();
 		
 		for(String email: emails) {
-			String localName=makeLocalName(email);
-			String domainName=makeDomainName(email);
+			String localName=makeLocalName(email);		// test email
+			String domainName=makeDomainName(email);	// after @
+		
+			// set에 넣어 @를 기준으로 다시 연결시켜준다  
+			set.add(localName+"@"+domainName);
 		}
 	}
 	
@@ -52,6 +55,6 @@ public class UniqueEmailAddress {
 		return sb.toString();
 	}
 	private String makeDomainName(String email) {
-		
+		return email.substring(email.indexOf('@')+1);	// @가 아니라 @ 바로 뒤부터 필요하므로 +1
 	}
 }
