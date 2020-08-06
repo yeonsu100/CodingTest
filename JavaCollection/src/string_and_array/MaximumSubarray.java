@@ -14,6 +14,13 @@ public class MaximumSubarray {
 	}
 	
 	public static int maxSubArray(int[] nums) {
+		int newSum=nums[0];
+		int max=nums[0];
 		
+		for(int i=1; i<nums.length; i++) {
+			Math.max(nums[i], newSum+nums[i]);
+			max=Math.max(newSum, max);
+		}
+		return max;
 	}
 }
