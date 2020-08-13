@@ -10,6 +10,7 @@ public class TrappingRainWater {
 		int left[] = new int[height.length];
 	    int right[]= new int[height.length];
 		
+	    // scan from left to right 
 		int max=height[0];
 		left[0]=height[0];
 		
@@ -22,6 +23,7 @@ public class TrappingRainWater {
 			}
 		}
 		
+		// scan from right to left 
 		max=height[height.length-1];
 		right[height.length-1]=height[height.length-1];
 	    for(int i=height.length-2; i>=0; i--){
@@ -33,6 +35,7 @@ public class TrappingRainWater {
 	        }
 	    }
 	    
+	    // calculate total 
 	    for(int i=0; i<height.length; i++) {
 	    	result+=Math.min(left[i], right[i])-height[i];
 	    }
