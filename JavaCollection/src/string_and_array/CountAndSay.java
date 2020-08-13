@@ -14,10 +14,12 @@ public class CountAndSay {
 				if(result.charAt(j)==result.charAt(j-1)) {
 					count++;
 				}else {
+					sb.append(count);
+					sb.append(result.charAt(j-1));
 					count=1;
 				}
 			}
 		}
+		return result;
 	}
-	return result;
 }
