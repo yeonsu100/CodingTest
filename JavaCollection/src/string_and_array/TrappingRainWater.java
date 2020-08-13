@@ -33,6 +33,10 @@ public class TrappingRainWater {
 	        }
 	    }
 	    
+	    for(int i=0; i<height.length; i++) {
+	    	result+=Math.min(left[i], right[i])-height[i];
+	    }
+	    
 	    return result;
 	}
 }
