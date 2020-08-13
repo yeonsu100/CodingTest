@@ -19,6 +19,10 @@ public class CountAndSay {
 					count=1;
 				}
 			}
+			sb.append(count);
+			sb.append(result.charAt(result.length()-1));
+			result=sb.toString();
+			i++;
 		}
 		return result;
 	}
