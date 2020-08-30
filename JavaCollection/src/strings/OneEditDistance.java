@@ -7,5 +7,22 @@ public class OneEditDistance {
 		
 		int m=s.length();
 		int n=t.length();
+		
+		if(Math.abs(m-n)>1) {
+			return false;
+		}
+		
+		int i=0;
+		int j=0;
+		int count=0;
+		
+		while(i<m && j<n) {
+			if(s.charAt(i) == t.charAt(j)) {
+				i++;
+				j++;
+			}else {
+				count++;
+			}
+		}
 	}
 }
