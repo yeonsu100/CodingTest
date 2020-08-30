@@ -22,6 +22,17 @@ public class OneEditDistance {
 				j++;
 			}else {
 				count++;
+				if(count>1)
+					return false;
+				
+				if(m>n) {
+					i++;
+				}else if(m<n) {
+					j++;
+				}else {
+					i++;
+					j++;
+				}
 			}
 		}
 	}
