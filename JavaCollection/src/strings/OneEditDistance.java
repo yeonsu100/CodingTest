@@ -35,5 +35,12 @@ public class OneEditDistance {
 				}
 			}
 		}
+		
+		if(i<m || j<n) {
+			count++;
+		}
+		if(count==1) {
+			return true;
+		}
 	}
 }
