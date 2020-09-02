@@ -1,6 +1,7 @@
 package sorting;
 
 public class ShellSort {
+    // An utility function to print array of size n
     static void printArray(int arr[]) { 
         int n=arr.length; 
         for (int i=0; i<n; ++i) 
@@ -8,9 +9,11 @@ public class ShellSort {
         System.out.println(); 
     } 
   
+    // function to sort arr using shell sort
     int sort(int arr[]) { 
         int n = arr.length; 
   
+        // Start with a big gap, then reduce the gap 
         for (int gap = n / 2; gap > 0; gap /= 2) { 
             for (int i = gap; i < n; i += 1) { 
                 int temp = arr[i]; 
@@ -19,12 +22,14 @@ public class ShellSort {
                 for (j=i; j>=gap && arr[j-gap]>temp; j-=gap) 
                     arr[j]=arr[j-gap]; 
   
+                // put temp (the original a[i]) in its correct location 
                 arr[j]=temp; 
             } 
         } 
         return 0; 
     } 
   
+    // Driver method 
     public static void main(String args[]) { 
         int arr[]={12, 34, 54, 2, 3 }; 
         System.out.println("Array before sorting"); 
