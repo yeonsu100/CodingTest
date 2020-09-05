@@ -20,6 +20,9 @@ public class WordDistance {
 	}
 	
 	public int shortest(String word1, String word2) {
-		int result=Integer.MAX_VALUE;
+		ArrayList<Integer> l1=map.get(word1);
+		ArrayList<Integer> l2=map.get(word2);
+		
+		int result=Integer.MAX_VALUE;		
 	}
 }
