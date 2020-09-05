@@ -7,6 +7,16 @@ public class WordDistance {
 	HashMap<String, ArrayList<Integer>> map;
 	public WordDistance(String[] words) {
 		map=new HashMap<String, ArrayList<Integer>>();
+		
+		for(int i=0; i<words.length; i++) {
+			if(map.containsKey(words[i])) {
+				map.get(words[i]).add(i);
+			}else {
+				ArrayList<Integer> list=new ArrayList<Integer>();
+				list.add(i);
+				map.put(words[i], list);
+			}
+		}
 	}
 	
 	public int shortest(String word1, String word2) {
