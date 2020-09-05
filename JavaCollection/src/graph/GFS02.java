@@ -20,4 +20,11 @@ public class GFS02 {
             System.out.println(); 
         } 
     } 
+	
+    
+  // Driver code 
+  public static void main (String[] args) { 
+      int line=7; 
+      pattern(line); 
+  } 
 }
