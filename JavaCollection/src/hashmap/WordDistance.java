@@ -24,5 +24,11 @@ public class WordDistance {
 		ArrayList<Integer> l2=map.get(word2);
 		
 		int result=Integer.MAX_VALUE;		
+		for(int i1:l1) {
+			for(int i2:l2) {
+				result=Math.min(result,  Math.abs(i1-i2));
+			}
+		}
+		return result;
 	}
 }
