@@ -11,6 +11,16 @@ public class MixedExercise09 {
 		int l=(k+1)%n;
 		int r=k;
 		
+		while(l!=r) {
+			if(arr_int[l]+arr_int[r] == x) {
+				return true;
+			}
+			if(arr_int[l]+arr_int[r] < x) {
+				l=(l+1)%n;
+			}else {
+				r=(n+r-1)%n;
+			}
+		}
 	}
 	
 	public static void main(String[] args) {
