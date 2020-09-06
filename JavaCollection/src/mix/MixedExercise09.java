@@ -27,5 +27,11 @@ public class MixedExercise09 {
 		int arr_int[]= {29, 13, 17, 7, 18, 20};
 		int sum=42;
 		int n=arr_int.length;
+		
+		if(sum_pair(arr_int, n, sum)) {
+			System.out.print("Array has a pair of elements with sum 42.");
+		}else {
+			System.out.print("Array has no pair with sum 42.");
+		}
 	}
 }
