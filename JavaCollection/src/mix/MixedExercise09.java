@@ -21,6 +21,7 @@ public class MixedExercise09 {
 				r=(n+r-1)%n;
 			}
 		}
+		return false;
 	}
 	
 	public static void main(String[] args) {
