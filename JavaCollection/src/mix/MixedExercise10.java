@@ -15,9 +15,20 @@ public class MixedExercise10 {
 		if(nums1==null || nums1.length==0) {
 			return 0;
 		}
+		
 		int start=0;
 		int end=nums1.length-1;
 		int mid=start+(end-start)/2;
 
+		while(start+1<end) {
+			mid=start+(end-start)/2;
+			if(nums1[mid]==target) {
+				return mid;
+			}else if(nums1[mid]>target) {
+				end=mid;
+			}else {
+				start=mid;
+			}
+		}
 	}
 }
