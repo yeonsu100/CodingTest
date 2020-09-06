@@ -24,6 +24,8 @@ public class MixedExercise09 {
 	}
 	
 	public static void main(String[] args) {
-		
+		int arr_int[]= {29, 13, 17, 7, 18, 20};
+		int sum=42;
+		int n=arr_int.length;
 	}
 }
