@@ -25,7 +25,10 @@ public class CountPrimes03 {
 					break;
 				}
 			}
-		
+		if(isPrime) {
+			primes.add(i);
+		}
+	}
 		return true;
 	}
 }
