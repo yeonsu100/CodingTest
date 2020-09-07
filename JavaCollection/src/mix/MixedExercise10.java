@@ -30,5 +30,13 @@ public class MixedExercise10 {
 				start=mid;
 			}
 		}
+		
+		if(nums1[start]>=target) {
+			return start;
+		}else if(nums1[start]<target && target <= nums1[end]) {
+			return end;
+		}else {
+			return end+1;
+		}
 	}
 }
