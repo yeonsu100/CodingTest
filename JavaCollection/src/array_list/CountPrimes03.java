@@ -29,6 +29,6 @@ public class CountPrimes03 {
 			primes.add(i);
 		}
 	}
-		return true;
+		return primes.size();
 	}
 }
