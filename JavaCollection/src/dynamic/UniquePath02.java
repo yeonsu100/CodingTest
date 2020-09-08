@@ -1,6 +1,6 @@
 package dynamic;
 
-public class UniquePath {
+public class UniquePath02 {
 	// Dynamic Programming
 	public static void main(String[] args) {
 		int m=7, n=3;
