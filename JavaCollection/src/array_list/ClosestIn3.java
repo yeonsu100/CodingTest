@@ -9,6 +9,10 @@ public class ClosestIn3 {
 	 
 		Arrays.sort(nums);
 	 
+		for(int i=0; i<nums.length; i++) {
+			int j=i+1;
+			int k=nums.length-1;
+		}
 		return 0;
 	}
 }
