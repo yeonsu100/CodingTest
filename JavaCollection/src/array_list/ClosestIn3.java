@@ -31,6 +31,6 @@ public class ClosestIn3 {
 				}
 			}
 		}
-		return 0;
+		return result;
 	}
 }
