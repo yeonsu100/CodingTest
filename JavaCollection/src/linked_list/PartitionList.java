@@ -15,10 +15,20 @@ public class PartitionList {
 		while(p!=null) {
 			if(p.val < x) {
 				p=p.next;
+				prev=prev.next;
 			}else {
 				p2.next=p;
+				prev.next=p.next;
+				
+				p=prev.next;
+				p2=p2.next;
 			}
 		}
+		
+		// close the List
+		p2.next=null;
+		
+		prev.next=fakeHead2.next;
 
 		return fakeHead1.next;
 	}
