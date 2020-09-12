@@ -11,7 +11,7 @@ public class Permutations01 {
 	}
 	
 	private void helper(int start, int[] nums, List<List<Integer>> result) {
-		if(start==nums.length) {
+		if(start==nums.length-1) {
 			ArrayList<Integer> list=new ArrayList<>();
 				for(int num:nums) {
 					list.add(num);
@@ -22,12 +22,14 @@ public class Permutations01 {
 		
 		for(int i=start; i<nums.length; i++) {
 			swap(nums, i, start);
-			helper(start, nums, result);
+			helper(start+1, nums, result);
 			swap(nums, i, start);
 		}
 	}
 	
 	private void swap(int[] nums, int i, int j) {
-		
+		int temp=nums[i];
+		nums[i]=nums[j];
+		nums[j]=temp;
 	}
 }
