@@ -9,8 +9,16 @@ public class Permutations04 {
 		
 		for(int i=0; i<num.length; i++) {
 			Set<ArrayList<Integer>> currentSet=new HashSet<ArrayList<Integer>>();
+			
+			for(List<Integer> l:returnList) {
+				for (int j = 0; j < l.size() + 1; j++) {
+					l.add(j, num[i]);
+					ArrayList<Integer> T = new ArrayList<Integer>(l);
+					l.remove(j);
+					currentSet.add(T);
+				}
+			}
 		}
-		
 		return returnList;
 	}
 }
