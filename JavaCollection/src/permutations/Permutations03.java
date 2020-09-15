@@ -19,5 +19,13 @@ public class Permutations03 {
 	        result.add(list);
 	        return;
 	    }
+	    for(int i=start; i<nums.length; i++){
+	        swap(nums, i, start);
+	        helper(start+1, nums, result);
+	        swap(nums, i, start);
+	    }
+	}
+	private void swap(int[] nums, int i, int j){
+	 
 	}
 }
