@@ -19,7 +19,16 @@ public class Permutations03 {
 	        result.add(list);
 	        return;
 	    }
+	    
+	    HashSet<Integer> set=new HashSet<>();
+	    
 	    for(int i=start; i<nums.length; i++){
+	    	if(set.contains(nums[i])) {
+	    		continue;
+	    	}
+	    	
+	    	set.add(nums[i]);
+	    	
 	        swap(nums, i, start);
 	        helper(start+1, nums, result);
 	        swap(nums, i, start);
