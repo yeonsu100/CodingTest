@@ -18,6 +18,7 @@ public class Permutations04 {
 					currentSet.add(T);
 				}
 			}
+			returnList=new ArrayList<ArrayList<Integer>>(currentSet);
 		}
 		return returnList;
 	}
