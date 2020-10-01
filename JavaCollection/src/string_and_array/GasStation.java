@@ -16,5 +16,11 @@ public class GasStation {
 			}
 			total += remaining;
 		}
+		
+		if(total >= 0) {
+			return start;
+		}else {
+			return -1;
+		}
 	}
 }
