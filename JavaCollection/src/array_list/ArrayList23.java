@@ -18,7 +18,7 @@ public class ArrayList23 {
 			for(int j=0; j<i; j++) {
 				if(b[i]==b[j]) {
 					cnt--;
-					berak;
+					break;
 				}
 			}
 			cnt++;
