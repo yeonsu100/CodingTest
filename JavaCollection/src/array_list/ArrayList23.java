@@ -13,6 +13,17 @@ public class ArrayList23 {
 			a[i]=scan.nextInt();
 			b[i]=(a[i]%42);
 		}
+		
+		for(int i=0; i<b.length; i++) {
+			for(int j=0; j<i; j++) {
+				if(b[i]==b[j]) {
+					cnt--;
+					berak;
+				}
+			}
+			cnt++;
+		}
+		System.out.print(cnt);
 	}
 }
 
